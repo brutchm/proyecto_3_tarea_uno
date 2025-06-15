@@ -1,0 +1,369 @@
+type: collection.insomnia.rest/5.0
+name: Brandon_Rutch_Tarea_1
+meta:
+  id: wrk_90c364d479314876b36d290989461539
+  created: 1748478420348
+  modified: 1748478420348
+  description: ""
+collection:
+  - url: http://localhost:8080/auth/login
+    name: Log In User (No auth)
+    meta:
+      id: req_d75834820d5141fcaa3a21c9deb67c53
+      created: 1748478989028
+      modified: 1748481945180
+      isPrivate: false
+      description: ""
+      sortKey: -1748478989028
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "user@gmail.com", 
+        	"password": "user1234"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/auth/login
+    name: Log In Admin (No auth)
+    meta:
+      id: req_116ddaf9494f4cd7bf5753a5754668e4
+      created: 1748481284996
+      modified: 1748492349672
+      isPrivate: false
+      description: ""
+      sortKey: -1748481284996
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "super.admin@gmail.com", 
+        	"password": "superadmin123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci5hZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDg0OTIxMjEsImV4cCI6MTc0ODQ5NTcyMX0.McvnEZmRXdch_bV6KDn2rFgNknBad3oKTVuhmAz_GYI
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/categories/category
+    name: Category Create
+    meta:
+      id: req_d59dfe68277744418535f6ac3eb90e41
+      created: 1748490240415
+      modified: 1748491261802
+      isPrivate: false
+      description: ""
+      sortKey: -1748490240415
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Movie",
+        	"description": "Movies with lenght between 1:25 Hours and 4:00 Hours"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci5hZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDg0OTA1NDUsImV4cCI6MTc0ODQ5NDE0NX0.wi8LnxxPGa2MkS70MNAq1SirwQsSuu8shmXU9rfw--0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/categories
+    name: Category Read All
+    meta:
+      id: req_48b3b9273f5e48729adb02ccb2ec87f1
+      created: 1748490727327
+      modified: 1748491892035
+      isPrivate: false
+      description: ""
+      sortKey: -1748490727327
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci5hZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDg0OTE4MjEsImV4cCI6MTc0ODQ5NTQyMX0.pqco5FGL4bHEOv76whj9u4SDmNyVmr9CUOoXeuod3YA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/categories/1
+    name: Category Update
+    meta:
+      id: req_a41acd4ed4284a84a40f27cde04a52d3
+      created: 1748490823035
+      modified: 1748492162475
+      isPrivate: false
+      description: ""
+      sortKey: -1748490823035
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Short",
+        	"description": "Videos with lenght below 1:00 minutes"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci5hZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDg0OTA1NDUsImV4cCI6MTc0ODQ5NDE0NX0.wi8LnxxPGa2MkS70MNAq1SirwQsSuu8shmXU9rfw--0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/categories/2
+    name: Category Read by ID
+    meta:
+      id: req_fb7f3a003d6c4a229268853e5c091246
+      created: 1748490975321
+      modified: 1748490992428
+      isPrivate: false
+      description: ""
+      sortKey: -1748490775181
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTc0ODQ5MDc5NSwiZXhwIjoxNzQ4NDk0Mzk1fQ.4Y907cx3AIgKCEjADyh-kccRWL73_yQdhSwpiDhdTNE
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/categories/1
+    name: Category Delete
+    meta:
+      id: req_bcc45de4377040b7a4ae3c6b12db6af8
+      created: 1748491030088
+      modified: 1748491114059
+      isPrivate: false
+      description: ""
+      sortKey: -1748491030088
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci5hZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDg0OTA1NDUsImV4cCI6MTc0ODQ5NDE0NX0.wi8LnxxPGa2MkS70MNAq1SirwQsSuu8shmXU9rfw--0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/products/product/1
+    name: Product Create
+    meta:
+      id: req_11eef0d5ee6b48ae922c180a1fdb0f65
+      created: 1748491289122
+      modified: 1748492369615
+      isPrivate: false
+      description: ""
+      sortKey: -1748491289122
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "The Wolf of Wall Street",
+        	"description": "Follow the life of Jordan Belfort",
+        	"price": "20",
+        	"stock": "10"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci5hZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDg0OTIyODgsImV4cCI6MTc0ODQ5NTg4OH0.57K1QZ4pewaOXLXy9PY40EDgUU2JfQRNjldmBCn2B28
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/products
+    name: Product Read All
+    meta:
+      id: req_af438bb158914408a86177a7801b94f3
+      created: 1748491837289
+      modified: 1748492373874
+      isPrivate: false
+      description: ""
+      sortKey: -1748491837289
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci5hZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDg0OTIyODgsImV4cCI6MTc0ODQ5NTg4OH0.57K1QZ4pewaOXLXy9PY40EDgUU2JfQRNjldmBCn2B28
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/products/product/1
+    name: Product Read by ID
+    meta:
+      id: req_58e31c9b50b348d694cb217aecafdc2c
+      created: 1748491930258
+      modified: 1748492395722
+      isPrivate: false
+      description: ""
+      sortKey: -1748491837389
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci5hZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDg0OTIyODgsImV4cCI6MTc0ODQ5NTg4OH0.57K1QZ4pewaOXLXy9PY40EDgUU2JfQRNjldmBCn2B28
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/products/1
+    name: Product Update
+    meta:
+      id: req_f22482386b67428a9244f4991f808911
+      created: 1748492145238
+      modified: 1748492407106
+      isPrivate: false
+      description: ""
+      sortKey: -1748492145238
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Lord of the Rings",
+        	"description": "Best Movie Ever",
+        	"price": "30",
+        	"stock": "5"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci5hZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDg0OTIyODgsImV4cCI6MTc0ODQ5NTg4OH0.57K1QZ4pewaOXLXy9PY40EDgUU2JfQRNjldmBCn2B28
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/products/1
+    name: Product Delete
+    meta:
+      id: req_b14ea77755e3413394546555a783a07f
+      created: 1748492229663
+      modified: 1748492421753
+      isPrivate: false
+      description: ""
+      sortKey: -1748492229663
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlci5hZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3NDg0OTIyODgsImV4cCI6MTc0ODQ5NTg4OH0.57K1QZ4pewaOXLXy9PY40EDgUU2JfQRNjldmBCn2B28
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_8a775d1f75ac59a4cc50780d7dd816460de36041
+    created: 1748478420355
+    modified: 1748478420355
+environments:
+  name: Base Environment
+  meta:
+    id: env_8a775d1f75ac59a4cc50780d7dd816460de36041
+    created: 1748478420354
+    modified: 1748478420354
+    isPrivate: false
