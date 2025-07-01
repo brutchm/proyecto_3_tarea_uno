@@ -29,6 +29,7 @@ public class SecurityConfiguration {
         http
                 .csrf().disable()
                 .authorizeHttpRequests((authorize) -> authorize
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() // 👈 Permitir preflight
                         .requestMatchers(HttpMethod.POST, "/auth/**").permitAll()
                         .anyRequest().authenticated()
                 )
@@ -40,5 +41,6 @@ public class SecurityConfiguration {
 
         return http.build();
     }
+
 
 }
